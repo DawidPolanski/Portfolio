@@ -1,5 +1,5 @@
 let mouseCursor = document.querySelector(".cursor");
-let navLink = document.querySelectorAll(".navbar-items li");
+let navLink = document.querySelectorAll(".navbar-items");
 let backDropText = document.querySelectorAll(".back-drop-text");
 
 window.addEventListener("mousemove", cursor);

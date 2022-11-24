@@ -68,9 +68,33 @@ a {
   z-index: 1;
 }
 
+.project-content:hover {
+  background-position: right bottom;
+}
+
+.project-content {
+  position: relative;
+  padding: 0 15px;
+}
+.project-content .filter {
+  width: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-backdrop-filter: invert(1);
+          backdrop-filter: invert(1);
+  transition: width 2s ease;
+}
+.project-content:hover .filter {
+  width: 100%;
+}
+
 .link-grow {
   transform: scale(2);
-  border-color: rgb(255, 255, 255);
+  border: none;
+  background-color: rgba(255, 66, 255, 0.4);
   -webkit-backdrop-filter: invert(100%);
           backdrop-filter: invert(100%);
 }
@@ -95,14 +119,23 @@ a {
   color: rgba(255, 255, 255, 0.6);
 }
 .main .hero {
-  margin-top: 200px;
+  margin-top: 100px;
+}
+.main .hero .welcome-text-section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .main .hero .hero-title {
   font-size: 64px;
   font-weight: 200;
 }
+.main .hero .hero-title .navbar-items {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .main .hero .scroll-down {
-  margin-top: 100px;
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
   align-items: center;
