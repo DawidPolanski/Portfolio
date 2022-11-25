@@ -51,7 +51,7 @@ a {
   height: 30px;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 50%;
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: all 0.3s ease;
@@ -104,7 +104,7 @@ a {
     color: rgba(255, 255, 255, 0.6);
   }
   .hero {
-    margin-top: 100px;
+    margin-top: 150px;
     .welcome-text-section {
       width: fit-content;
     }
@@ -134,6 +134,7 @@ a {
   .section-title {
     font-size: 64px;
     padding-bottom: 50px;
+    width: fit-content;
   }
   .text-section {
     margin-bottom: 23px;
@@ -142,6 +143,7 @@ a {
   }
   .about-text {
     color: rgba(255, 255, 255, 0.6);
+    width: fit-content;
   }
   .abilities {
     margin-top: 40px;
@@ -171,6 +173,9 @@ a {
     }
     .left {
       width: 50%;
+      .text-section {
+        width: fit-content;
+      }
     }
   }
   .my-image img {
@@ -181,10 +186,11 @@ a {
   padding-top: 140px;
   padding-bottom: 180px;
   margin-top: 250px;
-  background-image: url(/assets/images/pexels-andrew-neel-2312369.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  min-height: 400px;
+  background: transparent;
   .section-title {
     text-align: center;
     font-size: 64px;
@@ -255,7 +261,7 @@ a {
   }
 }
 .contact {
-  background-color: #1e1e1e;
+  background-color: #000000;
   width: 100%;
   .contact-inner {
     display: grid;

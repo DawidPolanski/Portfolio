@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Hello my name is David i am Backend developer"
+      content="Hello my name is David i am Software Engineer"
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -89,7 +89,12 @@
         </div>
       </div>
     </section>
-    <section id="certification" class="certification">
+    <section
+      id="certification"
+      data-parallax="scroll"
+      data-image-src="/assets/images/background-g1b4896f57_1920.jpg"
+      class="certification"
+    >
       <div class="container">
         <h1 class="section-title">Certification</h1>
         <h2 class="certification-item">Microsoft ITA - 104</h2>
@@ -365,30 +370,21 @@
               alt="brand-linkedin"
             />
           </div>
-          <div class="right">
-            <form>
-              <label for="name">Name:</label>
-              <input
-                autocomplete="off"
-                type="text"
-                name="name"
-                placeholder="name"
-              />
-              <label for="message">message:</label>
-              <input
-                autocomplete="off"
-                type="text"
-                name="message"
-                placeholder="message"
-              />
-              <button type="submit">Send</button>
-            </form>
-          </div>
+          <div class="right"></div>
         </div>
       </div>
     </section>
     <script src="/assets/scripts/vanta/vanta/vendor/three.r134.min.js"></script>
     <script src="/assets/scripts/vanta/vanta/dist/vanta.birds.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/assets/scripts/parallax.js-1.5.0/parallax.min.js"></script>
+    <script src="/assets/scripts/locomotive-scroll/locomotive-scroll.min.js"></script>
+    <script>
+      const scroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+      });
+    </script>
     <script src="./assets/scripts/app.js"></script>
     <script src="/assets/scripts/selected.js"></script>
     <script>
