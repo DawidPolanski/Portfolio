@@ -1,6 +1,8 @@
 let mouseCursor = document.querySelector(".cursor");
 let navLink = document.querySelectorAll(".navbar-items");
 let backDropText = document.querySelectorAll(".back-drop-text");
+let hamburgercross = document.querySelectorAll(".burger-menu__line");
+let hambureger = document.querySelector(".burger-menu");
 
 window.addEventListener("mousemove", cursor);
 
@@ -26,3 +28,15 @@ backDropText.forEach((link) => {
     mouseCursor.classList.remove("about-link");
   });
 });
+
+hambureger.addEventListener("click", () => {
+  hamburgercross.forEach((link) => {
+    link.classList.toggle("burgerline-active");
+  });
+});
+
+// hambureger.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     hamburgercross.classList.add("burgerline-active");
+//   });
+// });

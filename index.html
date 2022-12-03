@@ -10,28 +10,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index,follow" />
     <link rel="icon" href="/assets/images/icons/programming.png" />
-    <title>Dawid Polański | Portfolio</title>
+    <title>David Polanski | Portfolio</title>
     <link rel="stylesheet" href="assets/styles/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <main class="main">
+      <header class="header">
+        <nav class="nav">
+          <div class="burger-menu">
+            Menu
+            <div class="lines">
+              <div class="burger-menu__line"></div>
+              <div class="burger-menu__line"></div>
+            </div>
+          </div>
+        </nav>
+      </header>
       <div class="cursor"></div>
       <div class="container">
-        <header class="header">
-          <ul class="navbar-items">
-            <li class="navbar-link">ABOUT ME</li>
-            <li class="navbar-link">CONTACT</li>
-            <li class="navbar-link">PROJECTS</li>
-          </ul>
-        </header>
         <div class="hero">
           <p class="welcome-text-section navbar-items">//welcome</p>
           <h1 class="hero-title">
-            <p class="navbar-items">Dawid Polański</p>
-            <p class="navbar-items">Software Engineer</p>
+            <p class="navbar-items"><span class="auto-type"></span></p>
           </h1>
           <div class="contact-me">
-            <p class="contact-text navbar-items">CONTACT ME</p>
+            <p
+              class="contact-text navbar-items"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="1000"
+            >
+              CONTACT ME
+            </p>
             <img
               class="arrow"
               src="/assets/images/icons/arrow-right-t.svg"
@@ -69,7 +80,6 @@
                 <img src="/assets/images/icons/eye-t.svg" alt="Perceptive" />
                 Perceptive
               </p>
-
               <p class="abilities-item back-drop-text">
                 <img
                   src="/assets/images/icons/chart-up-t.svg"
@@ -362,29 +372,43 @@
       <div class="container">
         <div class="contact-inner">
           <div class="left">
-            <p class="text-section">// Contact</p>
+            <h1 class="inner-text">Lets speak about<br />your project</h1>
             <h1 class="section-title">Contact me</h1>
-            <img src="/assets/images/icons/brand-github 2.svg" alt="GitHub" />
-            <img
-              src="/assets/images/icons/brand-linkedin 2.svg"
-              alt="brand-linkedin"
-            />
+
+            <p class="text-section">Drop me line at</p>
+            <h1 class="mail">dpolanski1999@gmail.com</h1>
           </div>
-          <div class="right"></div>
+          <div class="right">
+            <div class="imagine">
+              <img src="/assets/images/icons/github.svg" alt="github-logo" />
+              <img
+                src="/assets/images/icons/linkedin.svg"
+                alt="linkedin-logo"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var options = {
+        strings: ["Hi my name is David Polanski", "I'm Software Engineer"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true,
+      };
+
+      var typed = new Typed(".auto-type", options);
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="/assets/scripts/vanta/vanta/vendor/three.r134.min.js"></script>
     <script src="/assets/scripts/vanta/vanta/dist/vanta.birds.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/assets/scripts/parallax.js-1.5.0/parallax.min.js"></script>
-    <script src="/assets/scripts/locomotive-scroll/locomotive-scroll.min.js"></script>
-    <script>
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true,
-      });
-    </script>
     <script src="./assets/scripts/app.js"></script>
     <script src="/assets/scripts/selected.js"></script>
     <script>
