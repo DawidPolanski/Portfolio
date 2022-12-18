@@ -21,7 +21,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
 .section-title {
   font-size: 50px;
   color: white;
@@ -35,7 +34,39 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.open {
+  opacity: 1 !important;
+}
+.navigation-menu {
+  background-color: #fff;
+  bottom: 0;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s ease;
+  justify-content: space-between;
+  opacity: 0;
+  padding: 3.906vw 5.078vw;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 20.141vw;
+  z-index: -1;
+  .navigation-menu-inner {
+    li {
+      list-style-type: none;
+      margin-top: 20px;
+      font-size: 25px;
+      a {
+        cursor: none;
+      }
+    }
+  }
+}
+.cursornav {
+  border: none;
+  backdrop-filter: invert(100%);
+}
 .nav {
   display: flex;
   flex-direction: row-reverse;
@@ -46,16 +77,18 @@ a {
   .burger-menu {
     display: flex;
     align-items: center;
+    z-index: 200;
     .lines {
       right: 50px;
       position: fixed;
     }
     &__line {
+      transition: all 0.3s ease;
       min-width: 30px;
-      height: 1px;
+      height: 1.5px;
       background-color: white;
       &:nth-child(2) {
-        margin-top: 10px;
+        margin-top: 9px;
       }
     }
   }
@@ -66,7 +99,16 @@ a {
   transform-origin: center;
   transition: all 0.3s ease;
   transform-origin: 75% 75%;
+  opacity: 1;
+  height: 1px;
+  width: 1px;
+  &:nth-child(1) {
+    background-color: #000000;
+    transition: all 0.4 ease;
+  }
   &:nth-child(2) {
+    background-color: #000000;
+    transition: all 0.4 ease;
     bottom: 0;
     position: relative;
     transition: all 0.3s ease;
@@ -75,8 +117,13 @@ a {
     transform-origin: 75% 75%;
   }
 }
-
+.cursorgrayscale {
+  transform: scale(2);
+  border: none;
+  background-color: rgba(28, 28, 28, 0.4);
+}
 .cursor {
+  opacity: 1;
   width: 30px;
   height: 30px;
   border: 2px solid rgb(255, 255, 255);
@@ -87,7 +134,7 @@ a {
   transition: all 0.3s ease;
   transition-property: background, transform;
   transform-origin: 100% 100%;
-  z-index: +1;
+  z-index: 1;
 }
 .project-content:hover {
   background-position: right bottom;
@@ -97,6 +144,7 @@ a {
   position: relative;
   padding: 0 15px;
   .filter {
+    z-index: 2;
     width: 0%;
     position: absolute;
     top: 0;
@@ -148,6 +196,7 @@ a {
     .scroll-down {
       writing-mode: vertical-lr;
       align-items: center;
+      cursor: none;
       animation: mymove 2s infinite ease;
       @keyframes mymove {
         0% {
@@ -162,11 +211,18 @@ a {
       }
     }
     .contact-me {
+      width: fit-content;
       display: flex;
       align-items: center;
       gap: 5px;
       margin-left: 550px;
       margin-top: 50px;
+      .contact-text {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: none;
+      }
     }
   }
 }
@@ -209,9 +265,14 @@ a {
     align-items: center;
     gap: 160px;
     .right {
+      display: flex;
       width: 50%;
-      background-color: grey;
       height: 573px;
+      .portfolio-img img {
+        position: relative;
+        max-height: 100%;
+        max-width: 100%;
+      }
     }
     .left {
       width: 50%;
@@ -219,9 +280,6 @@ a {
         width: fit-content;
       }
     }
-  }
-  .my-image img {
-    width: fit-content;
   }
 }
 .certification {
@@ -308,7 +366,7 @@ a {
   .contact-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 100px;
+    padding-bottom: 25px;
     .right {
       width: 100%;
       display: flex;
@@ -333,6 +391,7 @@ a {
       }
       .inner-text {
         font-size: 48px;
+        margin-top: 100px;
         margin-bottom: 150px;
       }
       .mail {
@@ -341,6 +400,43 @@ a {
       .text-section {
         padding-top: 92px;
       }
+    }
+  }
+}
+.footer {
+  margin-top: 100px;
+  background-color: #151515;
+  align-items: center;
+  height: 100px;
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    transform: translateY(150%);
+    .left {
+      width: 50%;
+      ul {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        gap: 25px;
+        list-style-type: none;
+        li a {
+          cursor: none;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .right {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    p {
+      display: flex;
+      align-items: center;
     }
   }
 }

@@ -26,6 +26,15 @@
             </div>
           </div>
         </nav>
+        <div class="navigation-menu">
+          <ul class="navigation-menu-inner">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#certification">Certification</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#project">Selected works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
       </header>
       <div class="cursor"></div>
       <div class="container">
@@ -34,25 +43,28 @@
           <h1 class="hero-title">
             <p class="navbar-items"><span class="auto-type"></span></p>
           </h1>
-          <div class="contact-me">
-            <p
-              class="contact-text navbar-items"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="1000"
-            >
-              CONTACT ME
-            </p>
-            <img
-              class="arrow"
-              src="/assets/images/icons/arrow-right-t.svg"
-              alt="arrow-right-t"
-            />
+          <div
+            class="contact-me navbar-items"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="1000"
+          >
+            <a href="#contact">
+              <p class="contact-text">
+                CONTACT ME<img
+                  class="arrow"
+                  src="/assets/images/icons/arrow-right-t.svg"
+                  alt="arrow-right-t"
+                />
+              </p>
+            </a>
           </div>
-          <p class="scroll-down navbar-items">
-            Scroll down
-            <img src="/assets/images/icons/arrow-down.svg" alt="arrow" />
-          </p>
+          <a href="#about" class="scroll-down href=">
+            <p class="navbar-items">
+              Scroll down
+              <img src="/assets/images/icons/arrow-down.svg" alt="arrow" />
+            </p>
+          </a>
         </div>
       </div>
     </main>
@@ -95,7 +107,11 @@
               </p>
             </div>
           </div>
-          <div class="right"></div>
+          <div class="right">
+            <div class="portfolio-img">
+              <img src="/assets/images/DSCF2271v5.svg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -368,13 +384,12 @@
         </span>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="contact-inner">
           <div class="left">
             <h1 class="inner-text">Lets speak about<br />your project</h1>
-            <h1 class="section-title">Contact me</h1>
-
+            <h1 class="contact">Contact me</h1>
             <p class="text-section">Drop me line at</p>
             <h1 class="mail">dpolanski1999@gmail.com</h1>
           </div>
@@ -390,6 +405,55 @@
         </div>
       </div>
     </section>
+    <section class="footer" id="footer">
+      <div class="container">
+        <footer class="footer-inner">
+          <div class="left">
+            <ul>
+              <li class="back-drop-text">
+                <a href="#about"
+                  >About me
+                  <img src="/assets/images/icons/chevrons-up01.svg" alt=""
+                /></a>
+              </li>
+              <li class="back-drop-text">
+                <a href="#certification"
+                  >Certification<img
+                    src="/assets/images/icons/chevrons-up01.svg"
+                    alt=""
+                /></a>
+              </li>
+              <li class="back-drop-text">
+                <a href="#skills"
+                  >My skills
+                  <img src="/assets/images/icons/chevrons-up01.svg" alt=""
+                /></a>
+              </li>
+              <li class="back-drop-text">
+                <a href="#project"
+                  >Projects
+                  <img src="/assets/images/icons/chevrons-up01.svg" alt=""
+                /></a>
+              </li>
+              <li class="back-drop-text">
+                <a href="#contact"
+                  >Contact
+                  <img src="/assets/images/icons/chevrons-up01.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="right">
+            <p class="mail-contact">
+              <img
+                src="/assets/images/icons/Email.svg"
+                alt=""
+              />dpolanski1999@gmail.com
+            </p>
+          </div>
+        </footer>
+      </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       var options = {
@@ -398,7 +462,6 @@
         backSpeed: 50,
         loop: true,
       };
-
       var typed = new Typed(".auto-type", options);
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

@@ -42,6 +42,41 @@ a {
   margin: 0 auto;
 }
 
+.open {
+  opacity: 1 !important;
+}
+
+.navigation-menu {
+  background-color: #fff;
+  bottom: 0;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  transition: 0.4s ease;
+  justify-content: space-between;
+  opacity: 0;
+  padding: 3.906vw 5.078vw;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 20.141vw;
+  z-index: -1;
+}
+.navigation-menu .navigation-menu-inner li {
+  list-style-type: none;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.navigation-menu .navigation-menu-inner li a {
+  cursor: none;
+}
+
+.cursornav {
+  border: none;
+  -webkit-backdrop-filter: invert(100%);
+          backdrop-filter: invert(100%);
+}
+
 .nav {
   display: flex;
   flex-direction: row-reverse;
@@ -53,18 +88,20 @@ a {
 .nav .burger-menu {
   display: flex;
   align-items: center;
+  z-index: 200;
 }
 .nav .burger-menu .lines {
   right: 50px;
   position: fixed;
 }
 .nav .burger-menu__line {
+  transition: all 0.3s ease;
   min-width: 30px;
-  height: 1px;
+  height: 1.5px;
   background-color: white;
 }
 .nav .burger-menu__line:nth-child(2) {
-  margin-top: 10px;
+  margin-top: 9px;
 }
 
 .burgerline-active {
@@ -73,8 +110,17 @@ a {
   transform-origin: center;
   transition: all 0.3s ease;
   transform-origin: 75% 75%;
+  opacity: 1;
+  height: 1px;
+  width: 1px;
+}
+.burgerline-active:nth-child(1) {
+  background-color: #000000;
+  transition: all 0.4 ease;
 }
 .burgerline-active:nth-child(2) {
+  background-color: #000000;
+  transition: all 0.4 ease;
   bottom: 0;
   position: relative;
   transition: all 0.3s ease;
@@ -83,7 +129,14 @@ a {
   transform-origin: 75% 75%;
 }
 
+.cursorgrayscale {
+  transform: scale(2);
+  border: none;
+  background-color: rgba(28, 28, 28, 0.4);
+}
+
 .cursor {
+  opacity: 1;
   width: 30px;
   height: 30px;
   border: 2px solid rgb(255, 255, 255);
@@ -106,6 +159,7 @@ a {
   padding: 0 15px;
 }
 .project-content .filter {
+  z-index: 2;
   width: 0%;
   position: absolute;
   top: 0;
@@ -169,6 +223,7 @@ a {
   -ms-writing-mode: tb-lr;
       writing-mode: vertical-lr;
   align-items: center;
+  cursor: none;
   -webkit-animation: mymove 2s infinite ease;
           animation: mymove 2s infinite ease;
 }
@@ -195,11 +250,20 @@ a {
   }
 }
 .main .hero .contact-me {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: flex;
   align-items: center;
   gap: 5px;
   margin-left: 550px;
   margin-top: 50px;
+}
+.main .hero .contact-me .contact-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: none;
 }
 
 .about {
@@ -249,19 +313,19 @@ a {
   gap: 160px;
 }
 .about .wrapper .right {
+  display: flex;
   width: 50%;
-  background-color: grey;
   height: 573px;
+}
+.about .wrapper .right .portfolio-img img {
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
 }
 .about .wrapper .left {
   width: 50%;
 }
 .about .wrapper .left .text-section {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.about .my-image img {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -360,7 +424,7 @@ a {
 .contact .contact-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-bottom: 100px;
+  padding-bottom: 25px;
 }
 .contact .contact-inner .right {
   width: 100%;
@@ -387,6 +451,7 @@ a {
 }
 .contact .contact-inner .left .inner-text {
   font-size: 48px;
+  margin-top: 100px;
   margin-bottom: 150px;
 }
 .contact .contact-inner .left .mail {
@@ -394,4 +459,44 @@ a {
 }
 .contact .contact-inner .left .text-section {
   padding-top: 92px;
+}
+
+.footer {
+  margin-top: 100px;
+  background-color: #151515;
+  align-items: center;
+  height: 100px;
+}
+.footer .footer-inner {
+  display: flex;
+  align-items: center;
+  transform: translateY(150%);
+}
+.footer .footer-inner .left {
+  width: 50%;
+}
+.footer .footer-inner .left ul {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 25px;
+  list-style-type: none;
+}
+.footer .footer-inner .left ul li a {
+  cursor: none;
+  display: flex;
+  align-items: center;
+}
+.footer .right {
+  width: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.footer .right p {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
