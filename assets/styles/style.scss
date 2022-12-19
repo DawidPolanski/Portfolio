@@ -36,12 +36,14 @@ a {
 }
 .open {
   opacity: 1 !important;
+  display: flex !important;
 }
 .navigation-menu {
   background-color: #fff;
+  display: none;
   bottom: 0;
   color: #000;
-  display: flex;
+
   flex-direction: column;
   transition: 0.4s ease;
   justify-content: space-between;
@@ -51,11 +53,13 @@ a {
   right: 0;
   top: 0;
   width: 20.141vw;
-  z-index: -1;
+  z-index: 10;
   .navigation-menu-inner {
     li {
       list-style-type: none;
       margin-top: 20px;
+      position: relative;
+      z-index: 10;
       font-size: 25px;
       a {
         cursor: none;
@@ -77,7 +81,7 @@ a {
   .burger-menu {
     display: flex;
     align-items: center;
-    z-index: 200;
+    z-index: 20;
     .lines {
       right: 50px;
       position: fixed;
@@ -118,8 +122,9 @@ a {
   }
 }
 .cursorgrayscale {
-  transform: scale(2);
+  transition: all 0.3s ease;
   border: none;
+  transform: scale(2);
   background-color: rgba(28, 28, 28, 0.4);
 }
 .cursor {
@@ -183,6 +188,8 @@ a {
   }
   .hero {
     padding-top: 200px;
+    position: relative;
+    z-index: -1;
     .welcome-text-section {
       width: fit-content;
     }
